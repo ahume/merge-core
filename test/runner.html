@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner</title>
+
+  
+  
+  <link rel="stylesheet" type="text/css" href="vendor/jasmine-1.3.1/jasmine.css">
+  <script type="text/javascript" src="vendor/jasmine-1.3.1/jasmine.js"></script>
+  <script type="text/javascript" src="vendor/jasmine-1.3.1/jasmine-html.js"></script>
+  
+  <script type="text/javascript" src="../src/require.js"></script>
+
+  <script>
+    
+      require.config({"baseUrl":"../src/"});
+    
+  </script>
+  
+  <script>
+    require([
+      
+      
+      
+        './output' 
+        
+    ],
+    function(){
+      require(['./spec/ajax.spec.js','./spec/dateUtil.spec.js','./tools/reporter.js'], function(){
+        require(['./tools/jasmine-helper.js'], function(){
+          // good to go! Our tests should already be running.
+        })
+      })
+    }
+    )
+  </script>
+</head>
+<body>
+</body>
+</html>
