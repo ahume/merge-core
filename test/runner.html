@@ -27,7 +27,10 @@
         
     ],
     function(){
-      require(['./spec/ajax.spec.js','./spec/dateUtil.spec.js','./tools/reporter.js'], function(){
+      require([
+        './spec/ajax.spec.js',
+        './spec/dateUtil.spec.js',
+        './tools/reporter.js'], function(){
         require(['./tools/jasmine-helper.js'], function(){
           // good to go! Our tests should already be running.
         })

@@ -13,7 +13,7 @@ module.exports = function(grunt) {
       }
     },
     jasmine: {
-      src: "output.js",
+      src: "main.js",
       options: {
         version: '2.1.2',
         specs: "test/spec/*.spec.js",
@@ -39,7 +39,9 @@ module.exports = function(grunt) {
         eqnull: true,
         browser: true
       },
-      globals: {},
+      globals: {
+        'define': false
+      },
       files: ['src/*.js', 'test/spec/*.js']
     }
   });
